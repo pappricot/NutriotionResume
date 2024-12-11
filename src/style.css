@@ -1,0 +1,242 @@
+@import 'compass/css3';
+html {
+  scroll-behavior: smooth;
+}
+.image {
+  width: 250px;
+  float: left;
+  margin: 20px;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  flex-direction: column;
+}
+.first-page {
+  display: flex;
+}
+
+/* Nutritional Resume Column */
+.resume-column {
+  background-color: #ff0000;
+  flex: 1; /* Ensures both columns share equal width */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures content stays contained */
+}
+/* Coca-Cola inspired section */
+.coke-column {
+  flex: 1;
+  background: #ff0000; /* Coca-Cola red */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow issues */
+}
+ .core-skills-section {
+     flex: 1;
+  }
+.content {
+  background: #ff0000;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  /* Add these flex properties */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100%; /* Ensure full height of the container */
+  box-sizing: border-box;
+}
+.performance-facts__title {
+  color: #ff0000;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.small-info {
+  font-size: 0.8em;
+  color: #666;
+}
+p {
+  margin: 0;
+}
+
+.performance-facts {
+  background-color: #fff;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #000;
+  margin: 0; /* Remove any margin to avoid interference */
+  float: left;
+  width: 280px;
+  padding: 0.5rem;
+  table {
+    border-collapse: collapse;
+  }
+}
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem 0;
+}
+.performance-facts__header {
+  border-bottom: 5px solid #000;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+  p {
+    margin: 0;
+  }
+}
+.performance-facts__table {
+  width: 100%;
+  table-layout: fixed; /* Ensures table respects container width */
+  border-collapse: collapse;
+  thead tr {
+    th,
+    td {
+      border: 0;
+    }
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid #a0522d;
+    white-space: normal; /* Allow text wrapping */
+    word-wrap: break-word; /* Break long words if needed */
+    overflow-wrap: break-word; /* Ensure wrapping for long text */
+    max-width: 100%; /* Prevent overflowing beyond the cell */
+  }
+  td {
+    &:last-child {
+      text-align: right;
+    }
+  }
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+  .thick-row {
+    th,
+    td {
+      border-top-width: 5px;
+      border-top-color: #a0522d;
+    }
+  }
+}
+.small-info {
+  font-size: 0.7rem;
+}
+
+.performance-facts__table--small {
+  @extend .performance-facts__table;
+  border-bottom: 1px solid #a0522d;
+  margin: 0 0 0.5rem 0;
+  width: 100%; /* Make the table take full width */
+  table-layout: auto; /* Allow flexibility in column widths */
+  border-collapse: collapse;
+  thead {
+    tr {
+      border-bottom: 1px solid #a0522d;
+    }
+  }
+  td {
+    text-align: left;
+  }
+  th {
+    text-align: left;
+  }
+  td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.performance-facts__table--grid {
+  @extend .performance-facts__table;
+  margin: 0 0 0.5rem 0;
+  td {
+    &:last-child {
+      text-align: left;
+      &::before {
+        content: '•';
+        font-weight: bold;
+        margin: 0 0.25rem 0 0;
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.thick-end {
+  border-bottom: 10px solid #a0522d;
+}
+.thin-end {
+  border-bottom: 1px solid #a0522d;
+}
+.anya-logo {
+  max-width: 100%; /* Ensure the image scales within its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevent extra spacing around the image */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Landscape (Browser Mode) */
+@media (min-aspect-ratio: 3/2) {
+  body {
+    flex-direction: column; /* Place columns side by side */
+  }
+
+  .resume-column,
+  .coke-column {
+    flex: 1; /* Equal width for both sections */
+    height: auto; /* Let them adjust to the parent's height */
+  }
+
+  .core-skills-section {
+    flex-basis: 100%; /* Stays at the bottom spanning full width */
+    order: 2; /* Always placed after the two columns */
+  }
+
+  .resume-column {
+    order: 0; /* Left column */
+  }
+
+  .coke-column {
+    order: 1; /* Right column */
+  }
+}
+
+/* Portrait (Mobile View) */
+@media (max-aspect-ratio: 2/3) {
+  body {
+    flex-direction: column; /* Stack sections vertically */
+    height: 100%
+  }
+.first-page {
+  display: flex;
+  flex-direction: column-reverse;
+}
+  .resume-column {
+    flex: 3
+  }
+  .coke-column {
+    flex: 1; /* Equal height for both sections */
+  }
+
+  .core-skills-section {
+    flex-shrink: 0; /* Ensure it stays at the bottom */
+  }
+}

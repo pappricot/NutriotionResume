@@ -9,7 +9,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Verdana, sans-serif;
   color: #333;
   display: flex;
   flex-wrap: nowrap;
@@ -40,9 +40,6 @@ body {
   justify-content: center;
   overflow: hidden; /* Prevent overflow issues */
 }
- .core-skills-section {
-     flex: 1;
-  }
 .content {
   background: #ff0000;
   padding: 20px;
@@ -71,7 +68,7 @@ p {
 }
 
 .performance-facts {
-  background-color: #fff;
+  background-color: #FFF;
   align-self: center;
   align-items: center;
   justify-content: center;
@@ -186,13 +183,33 @@ p {
 .thin-end {
   border-bottom: 1px solid #a0522d;
 }
-.anya-logo {
-  max-width: 100%; /* Ensure the image scales within its container */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Prevent extra spacing around the image */
-  margin: 0 auto; /* Center the image */
+.empty-space {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
 }
-
+.anya-logo {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  z-index: 1;
+}
+#anya-red {
+  padding-left: 80px;
+}
+#color-pallete-title {
+  position: absolute;
+  top: -50;
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
 /* Landscape (Browser Mode) */
 @media (min-aspect-ratio: 3/2) {
   body {
@@ -205,7 +222,7 @@ p {
     height: auto; /* Let them adjust to the parent's height */
   }
 
-  .core-skills-section {
+  .projects-section {
     flex-basis: 100%; /* Stays at the bottom spanning full width */
     order: 2; /* Always placed after the two columns */
   }
@@ -236,7 +253,120 @@ p {
     flex: 1; /* Equal height for both sections */
   }
 
-  .core-skills-section {
+  .projects-section {
     flex-shrink: 0; /* Ensure it stays at the bottom */
   }
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: #C30508; /* Engineering Orange */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #6D0B0B; /* Blood Red */
+}
+
+.chevron {
+  font-size: 16px;
+}
+
+/* PROJECTS SECTION*/
+
+.projects-section {
+    display: flex;
+     flex: 1;
+    background-color:  #F6F1DD;
+  }
+.projects {
+  background-color: #D4080B; /* Burnt Sienna */
+  color: white;
+  transition: transform 0.3s ease;
+  max-width: 20%;
+  height: 800px;
+  margin-inline: 10px;
+  padding: 10px;
+}
+
+.projects:hover {
+  transform: translateY(-5px);
+}
+
+.projects h2 {
+  color: #F6F1DD;
+  text-align: center;
+}
+
+.projects p {
+  color: #FFF
+}
+#dark-text {
+  color: #6D0B0B
+}
+
+#project-one {
+  background-color: #C30508
+}
+#project-two {
+  background-color: #EF8065
+}
+#project-three {
+  background-color: #D4080B
+}
+#project-four {
+  background-color: #6D0B0B
+}
+#project-five {
+  background-color: #CFD6D3
+}
+
+/* SHOPPING CART */
+.cart-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #C30508; /* Engineering Orange from Coca-Cola palette */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #6D0B0B; /* Blood Red from Coca-Cola palette */
+  transform: scale(1.1);
+}
+
+.cart-button svg {
+  width: 24px;
+  height: 24px;
 }

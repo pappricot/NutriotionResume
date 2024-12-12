@@ -2,9 +2,18 @@
 <html>
   <head>
     <title>Brainutrion Facts of Anya Nguyen</title>
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button class="cart-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+    </button>
     <div class="first-page">
     <!-- Nutritional Resume Column -->
     <section class="resume-column">
@@ -28,31 +37,37 @@
             <tbody>
               <tr>
                 <th colspan="2">
-                  <a href="#react-native"><b>React Native Expertise</b></a>
+                  <b>React / React Native / Typescript</b>
                 </th>
                 <td>100%</td>
               </tr>
               <tr>
                 <th colspan="2">
-                  <a href="#unity-integration"><b>Unity Integration</b></a>
+                  <b>Figma</b>
                 </th>
-                <td>90%</td>
+                <td>100%</td>
               </tr>
               <tr>
                 <th colspan="2">
-                  <a href="#ci-cd"><b>CI/CD Management</b></a>
+                  <b>CI/CD Management</b>
                 </th>
                 <td>95%</td>
               </tr>
               <tr>
                 <th colspan="2">
-                  <a href="#figma-design"><b>Figma UI/UX Design</b></a>
+                  <b>React Query / Redux</b>
                 </th>
                 <td>85%</td>
               </tr>
               <tr>
                 <th colspan="2">
-                  <a href="#firebase"><b>Firebase & Analytics</b></a>
+                 <b>Firebase / NodeJS</b>
+                </th>
+                <td>80%</td>
+              </tr>
+               <tr></tr>
+                <th colspan="2">
+                 <b>Mixpanel / Meta Analytics</b>
                 </th>
                 <td>80%</td>
               </tr>
@@ -67,24 +82,34 @@
             </thead>
             <tbody>
               <tr>
-                <th colspan="2"><b>Grow Account</b></th>
-                <td>Gamified Banking UX</td>
+                <th colspan="2">
+                  <a href="#project-one"><b>Cove</b></a>
+                </th>
+                <td>Financial mobile gaming app</td>
               </tr>
               <tr>
-                <th colspan="2"><b>Capital RX</b></th>
-                <td>Legacy App Modernization</td>
+                <th colspan="2">
+                  <a href="#project-two"><b>Capital RX</b></a>
+                </th>
+                <td>BPM Management</td>
               </tr>
               <tr>
-                <th colspan="2"><b>Auxxit</b></th>
+                <th colspan="2">
+                  <b><a href="#project-three"><b>Auxxit</b></a></b>
+                </th>
                 <td>Virtual Live Auction App</td>
               </tr>
               <tr>
-                <th colspan="2"><b>Nifty Gateway</b></th>
-                <td>Early NFT Platform</td>
+                <th colspan="2">
+                 <a href="#project-four"><b>Nifty Gateway</b></a>
+                </th>
+               <td>Gemini's NFT platform</td>
               </tr>
               <tr>
-                <th colspan="2"><b>Samsung TV App</b></th>
-                <td>Enhanced Tizen UX</td>
+                <th colspan="2"><b>
+                  <a href="#project-five"><b>Kiira Health</b></a></b>
+                </th>
+                <td>On-demand OBGYN platform</td>
               </tr>
             </tbody>
           </table>
@@ -126,46 +151,75 @@
     </section>
     <!-- Coca-Cola Inspired Name Column -->
     <section class="coke-column">
-      <img src="../cola-anya-white.png" alt="Anya Logo" class="anya-logo" />
+      <img src="../cola-anya-with-shadow.png" alt="Anya Logo" class="anya-logo"/>
     </section>
+    </div> 
+    <div class="empty-space">
+      <img src="../cola-anya.png" alt="Anya Logo" class="anya-logo" id="anya-red"/>
+      <h3 id="color-pallete-title">Color Pallete of</h3>
     </div>
-    <!-- Core Skills Section -->
-     <section class="core-skills-section">
-    <div id="react-native" class="core-skill">
-      <h2>React Native Expertise</h2>
-      <p>
+    <!-- Projects Section -->
+     <section class="projects-section">
+    <div id="project-one" class="projects">
+      <h4>React / React Native / Typescript</h4>
+      <!-- <p>
         Proven track record of delivering scalable, high-performance mobile apps
         with React Native.
-      </p>
+      </p> -->
+          <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="location.href='project-pages/cove.html'">
+      Add to cart
+      <span class="chevron">&#x203A;</span>
+    </button>
     </div>
 
-    <div id="unity-integration" class="core-skill">
-      <h2>Unity Integration</h2>
+    <div id="project-two" class="projects">
+      <h4>Capital RX</h4>
       <p>
         Experience integrating Unity layers into React Native apps for enhanced
         interactive features.
       </p>
+          <!-- Toggle Button -->
+    <!-- <button class="toggle-btn" onclick="location.href='capital-rx.html'">
+      Case Study
+      <span class="chevron">&#x203A;</span>
+    </button> -->
     </div>
 
-    <div id="ci-cd" class="core-skill">
-      <h2>CI/CD Management</h2>
+    <div id="project-three" class="projects">
+      <h4>Auxxit</h4>
       <p>Streamlined CI/CD pipelines for faster, automated app delivery.</p>
+          <!-- Toggle Button -->
+    <!-- <button class="toggle-btn" onclick="location.href='auxxit.html'">
+      Case Study
+      <span class="chevron">&#x203A;</span>
+    </button> -->
     </div>
 
-    <div id="figma-design" class="core-skill">
-      <h2>Figma UI/UX Design</h2>
+    <div id="project-four" class="projects">
+      <h4>Nifty Gateway</h4>
       <p>
         Crafted pixel-perfect designs and prototypes using Figma for
         user-friendly experiences.
       </p>
+          <!-- Toggle Button -->
+    <!-- <button class="toggle-btn" onclick="location.href='nifty-gateway.html'">
+      Case Study
+      <span class="chevron">&#x203A;</span>
+    </button> -->
     </div>
 
-    <div id="firebase" class="core-skill">
-      <h2>Firebase & Analytics</h2>
-      <p>
+    <div id="project-five" class="projects">
+      <h4 id="dark-text">Kiira Health</h4>
+      <p id="dark-text">
         Integrated Firebase for real-time data and implemented analytics to
         track app performance.
       </p>
+          <!-- Toggle Button -->
+    <!-- <button class="toggle-btn" onclick="location.href='kiira-health.html'">
+      Case Study
+      <span class="chevron">&#x203A;</span>
+    </button> -->
     </div>
     </section>
   </body>

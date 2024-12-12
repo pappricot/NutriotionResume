@@ -1,6 +1,7 @@
 @import 'compass/css3';
 html {
   scroll-behavior: smooth;
+  background-color: #000;
 }
 .image {
   width: 250px;
@@ -15,9 +16,14 @@ body {
   flex-wrap: nowrap;
   height: 100vh;
   flex-direction: column;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 .first-page {
   display: flex;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* Nutritional Resume Column */
@@ -30,6 +36,8 @@ body {
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden; /* Ensures content stays contained */
+  max-width: 100vw;
+  width: 100%;
 }
 /* Coca-Cola inspired section */
 .coke-column {
@@ -39,11 +47,12 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden; /* Prevent overflow issues */
+  max-width: 100vw;
+  width: 100%;
 }
 .content {
   background: #ff0000;
   padding: 20px;
-  width: 90%;
   max-width: 600px;
   text-align: center;
   /* Add these flex properties */
@@ -52,6 +61,8 @@ body {
   justify-content: center; /* Center horizontally */
   height: 100%; /* Ensure full height of the container */
   box-sizing: border-box;
+  max-width: 100vw;
+  width: 100%;
 }
 .performance-facts__title {
   color: #ff0000;
@@ -75,11 +86,13 @@ p {
   border: 5px solid #000;
   margin: 0; /* Remove any margin to avoid interference */
   float: left;
-  width: 280px;
+  width: 400px;
   padding: 0.5rem;
   table {
     border-collapse: collapse;
   }
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .performance-facts__title {
   font-weight: bold;
@@ -183,33 +196,36 @@ p {
 .thin-end {
   border-bottom: 1px solid #a0522d;
 }
-.empty-space {
+.color-pallete-images-section {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 50px;
   background-color: #000;
 }
 .anya-logo {
-  max-width: 80%;
   height: auto;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  z-index: 1;
 }
+
 #anya-red {
-  padding-left: 80px;
-}
-#color-pallete-title {
   position: absolute;
+  margin-bottom: 50px;
+  margin-right: 130px;
+}
+
+#color-pallete-title {
   margin-top: 10px;
   color: #FFF;
-  text-align: center;
+  text-align: left;
   padding: 5px 15px;
   border-radius: 4px;
   width: 13%;
+  z-index: 1;
+  margin-left: 100px;
 }
 /* Landscape (Browser Mode) */
 @media (min-aspect-ratio: 3/2) {
@@ -268,12 +284,13 @@ a {
 }
 
 .toggle-btn {
-  background-color: #C30508; /* Engineering Orange */
+  background-color: #000; /* Engineering Orange */
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 14px;
+  box-shadow: 5px 5px 15px #1BCACA;
+  font-size: 24px;
   font-weight: bold;
   font-family: 'Great Vibes', cursive;
   cursor: pointer;
@@ -294,24 +311,30 @@ a {
 }
 
 /* PROJECTS SECTION*/
-
 .projects-section {
     display: flex;
-     flex: 1;
-    background-color:  #F6F1DD;
+    flex: 1;
+    background-color:  #000;
+    max-width: 100vw;
+    width: 100%;
   }
 .projects {
   background-color: #D4080B; /* Burnt Sienna */
   color: white;
   transition: transform 0.3s ease;
-  max-width: 20%;
+  min-width: 16%;
   height: 800px;
   margin-inline: 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .projects:hover {
-  transform: translateY(-5px);
+  transform: translateY(-50px);
 }
 
 .projects h2 {
@@ -320,7 +343,8 @@ a {
 }
 
 .projects p {
-  color: #FFF
+  color: #FFF;
+  text-align: center;
 }
 #dark-text {
   color: #6D0B0B
@@ -349,6 +373,7 @@ a {
   right: 20px;
   z-index: 1000;
   background-color: #C30508; /* Engineering Orange from Coca-Cola palette */
+  box-shadow: 5px 5px 15px #1BCACA;
   color: white;
   border: none;
   border-radius: 50%;
@@ -358,7 +383,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
 
@@ -370,4 +394,139 @@ a {
 .cart-button svg {
   width: 24px;
   height: 24px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1BCACA;
+  box-shadow: 5px 5px 55px #1BCACA;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1001;
+  font-size: 1.5em; /* Larger text */
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+
+}
+
+.cart-count {
+  background-color: #1BCACA;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: -5px;
+}
+
+.projects.added-to-cart {
+  background-color: #888; /* Grey out the project */
+  color: #ccc;
+  pointer-events: none; /* Disable interactions */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  box-shadow: 5px 5px 55px #1BCACA;
+  margin: 15% auto;
+  padding: 60px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.modal-content h2, h3 {
+  font-family: 'Great Vibes', cursive;
+}
+
+.modal-content h3 {
+  text-align: center;
+}
+
+.close-btn {
+  color: #1BCACA;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 20px;
+}
+
+#contact-form button {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.5em; /* Larger text */
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+  border-radius: 20px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form label,
+#contact-form input {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+ul#cart-items-list {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+  margin-bottom: 20px; /* Add space below the list */
+}
+
+ul#cart-items-list li {
+  position: relative;
+  padding-left: 20px; /* Space for the dash */
+}
+
+ul#cart-items-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #333; /* Dash color */
+}
+
+.separator {
+  border-bottom: 1px solid #ccc; /* Separation line style */
+  margin-bottom: 20px; /* Space below the line */
 }

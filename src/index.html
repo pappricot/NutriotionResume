@@ -151,12 +151,12 @@
     </section>
     <!-- Coca-Cola Inspired Name Column -->
     <section class="coke-column">
-      <img src="../cola-anya-with-shadow.png" alt="Anya Logo" class="anya-logo"/>
+      <img src="assets/cola-anya-with-shadow.png" alt="Anya Logo" class="anya-logo"/>
     </section>
     </div> 
-    <div class="empty-space">
-      <img src="../cola-anya.png" alt="Anya Logo" class="anya-logo" id="anya-red"/>
-      <img src="../color-pallete-title.png" alt="color pallete title" id="color-pallete-title"/>
+    <div class="color-pallete-images-section">
+      <img src="assets/anyas-red.png" alt="Anya Logo" class="anya-logo" id="anya-red"/>
+      <img src="assets/color-pallete-threedots.png" alt="color pallete title" id="color-pallete-title"/>
     </div>
     <!-- Projects Section -->
      <section class="projects-section">
@@ -166,61 +166,76 @@
         Proven track record of delivering scalable, high-performance mobile apps
         with React Native.
       </p> -->
-          <!-- Toggle Button -->
-    <button class="toggle-btn" onclick="location.href='project-pages/cove.html'">
-      Add to cart
+    <button class="toggle-btn">
+      Add to Cart
       <span class="chevron">&#x203A;</span>
     </button>
     </div>
 
     <div id="project-two" class="projects">
-      <h4>Capital RX</h4>
-      <p>
+      <h4>Figma</h4>
+      <!-- <p>
         Experience integrating Unity layers into React Native apps for enhanced
         interactive features.
-      </p>
-          <!-- Toggle Button -->
-    <!-- <button class="toggle-btn" onclick="location.href='capital-rx.html'">
-      Case Study
+      </p> -->
+   <button class="toggle-btn">
+      Add to Cart
       <span class="chevron">&#x203A;</span>
-    </button> -->
+    </button>
     </div>
 
     <div id="project-three" class="projects">
-      <h4>Auxxit</h4>
-      <p>Streamlined CI/CD pipelines for faster, automated app delivery.</p>
-          <!-- Toggle Button -->
-    <!-- <button class="toggle-btn" onclick="location.href='auxxit.html'">
-      Case Study
+      <h4>CI / CD Pipelines</h4>
+      <!-- <p>Streamlined CI/CD pipelines for faster, automated app delivery.</p> -->
+   <button class="toggle-btn">
+      Add to Cart
       <span class="chevron">&#x203A;</span>
-    </button> -->
+    </button>
     </div>
 
     <div id="project-four" class="projects">
-      <h4>Nifty Gateway</h4>
-      <p>
+      <h4>React Query / Redux</h4>
+      <!-- <p>
         Crafted pixel-perfect designs and prototypes using Figma for
         user-friendly experiences.
-      </p>
-          <!-- Toggle Button -->
-    <!-- <button class="toggle-btn" onclick="location.href='nifty-gateway.html'">
-      Case Study
+      </p> -->
+   <button class="toggle-btn">
+      Add to Cart
       <span class="chevron">&#x203A;</span>
-    </button> -->
+    </button>
     </div>
 
     <div id="project-five" class="projects">
-      <h4 id="dark-text">Kiira Health</h4>
-      <p id="dark-text">
+      <h4 id="dark-text">Mixpanel / Meta Analytics</h4>
+      <!-- <p id="dark-text">
         Integrated Firebase for real-time data and implemented analytics to
         track app performance.
-      </p>
-          <!-- Toggle Button -->
-    <!-- <button class="toggle-btn" onclick="location.href='kiira-health.html'">
-      Case Study
+      </p> -->
+    <button  class="toggle-btn">
+      <p >Case Study</p>
       <span class="chevron">&#x203A;</span>
-    </button> -->
+    </button>
     </div>
     </section>
+    <div id="cart-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Cart Items</h2>
+        <ul id="cart-items-list"></ul>
+        <div class="separator"></div>
+        <h3>Contact Information</h3>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" name="surname" required>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

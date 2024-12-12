@@ -195,7 +195,8 @@ p {
   max-width: 80%;
   height: auto;
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   z-index: 1;
 }
 #anya-red {
@@ -203,12 +204,12 @@ p {
 }
 #color-pallete-title {
   position: absolute;
-  top: -50;
-  margin: 0;
+  margin-top: 10px;
   color: #FFF;
   text-align: center;
   padding: 5px 15px;
   border-radius: 4px;
+  width: 13%;
 }
 /* Landscape (Browser Mode) */
 @media (min-aspect-ratio: 3/2) {

@@ -90,3 +90,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   const mailtoLink = `mailto:anya.p.nguyen@gmail.com?subject=Cola lala client&body=Name: ${name}%0D%0ASurname: ${surname}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AItems:%0D%0A${items}`;
   window.location.href = mailtoLink;
 });
+
+document.getElementById('switch-palette-button').addEventListener('click', () => {
+  document.documentElement.classList.toggle('alternative-palette');
+  
+  const anyaLogo = document.querySelector('.anya-logo');
+  if (document.documentElement.classList.contains('alternative-palette')) {
+    anyaLogo.src = 'assets/cola-anya-red-with-shadow-100.png';
+  } else {
+    anyaLogo.src = 'assets/cola-anya-white-with-shadow-100.png';
+  }
+});

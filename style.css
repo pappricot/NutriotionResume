@@ -1,4 +1,42 @@
 @import 'compass/css3';
+:root {
+  --coca-cola-red: #ff0000;
+  --engineering-orange: #C30508;
+  --blood-red: #6D0B0B;
+  --burnt-sienna: #D4080B;
+  --grey: #888;
+  --light-grey: #ccc;
+  --dash-color: #333;
+  --popup-bg: #1BCACA;
+  --modal-bg: #fefefe;
+  --border-color: #a0522d;
+  --project-one-bg: #C30508; 
+  --project-two-bg: #EF8065; 
+  --project-three-bg: #D4080B;
+  --project-four-bg: #6D0B0B;
+  --project-five-bg: #CFD6D3;
+  --project-text-color: #FFF;
+}
+
+:root.alternative-palette {
+  --coca-cola-red: #E6E6E5;
+  --engineering-orange: #E6E6E5;
+  --blood-red: #A7A7A7;
+  --burnt-sienna:  #7D7C7C;
+  --grey: #555;
+  --light-grey: #aaa;
+  --dash-color: #111;
+  --popup-bg: #CA1B1B;
+  --modal-bg: #eeeeee;
+  --border-color: #2d52a0;
+  --project-one-bg: #000000; 
+  --project-two-bg: #F70000;
+  --project-three-bg: #E6E6E5;
+  --project-four-bg: #A7A7A7;
+  --project-five-bg: #7D7C7C;
+  --project-text-color: #000000;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: #000;
@@ -28,7 +66,7 @@ body {
 
 /* Nutritional Resume Column */
 .resume-column {
-  background-color: #ff0000;
+  background-color: var(--coca-cola-red);
   flex: 1; /* Ensures both columns share equal width */
   padding: 20px;
   display: flex;
@@ -42,7 +80,7 @@ body {
 /* Coca-Cola inspired section */
 .coke-column {
   flex: 1;
-  background: #ff0000; /* Coca-Cola red */
+  background: var(--coca-cola-red); /* Coca-Cola red */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +89,7 @@ body {
   width: 100%;
 }
 .content {
-  background: #ff0000;
+  background: var(--coca-cola-red);
   padding: 20px;
   max-width: 600px;
   text-align: center;
@@ -65,7 +103,7 @@ body {
   width: 100%;
 }
 .performance-facts__title {
-  color: #ff0000;
+  color: var(--coca-cola-red);
   font-size: 2em;
   font-weight: bold;
 }
@@ -303,7 +341,7 @@ a {
 }
 
 .toggle-btn:hover {
-  background-color: #6D0B0B; /* Blood Red */
+  background-color: var(--blood-red); /* Blood Red */
 }
 
 .chevron {
@@ -319,7 +357,7 @@ a {
     width: 100%;
   }
 .projects {
-  background-color: #D4080B; /* Burnt Sienna */
+  background-color: var(--burnt-sienna); /* Burnt Sienna */
   color: white;
   transition: transform 0.3s ease;
   min-width: 16%;
@@ -351,19 +389,23 @@ a {
 }
 
 #project-one {
-  background-color: #C30508
+  background-color: var(--project-one-bg);
 }
 #project-two {
-  background-color: #EF8065
+  background-color: var(--project-two-bg);
 }
 #project-three {
-  background-color: #D4080B
+  background-color: var(--project-three-bg);
 }
 #project-four {
-  background-color: #6D0B0B
+  background-color: var(--project-four-bg);
 }
 #project-five {
-  background-color: #CFD6D3
+  background-color: var(--project-five-bg);
+}
+
+.projects h4, .projects p {
+  color: var(--project-text-color);
 }
 
 /* SHOPPING CART */
@@ -372,7 +414,7 @@ a {
   top: 20px;
   right: 20px;
   z-index: 1000;
-  background-color: #C30508; /* Engineering Orange from Coca-Cola palette */
+  background-color: var(--engineering-orange); /* Engineering Orange from Coca-Cola palette */
   box-shadow: 5px 5px 15px #1BCACA;
   color: white;
   border: none;
@@ -387,7 +429,7 @@ a {
 }
 
 .cart-button:hover {
-  background-color: #6D0B0B; /* Blood Red from Coca-Cola palette */
+  background-color: var(--blood-red); /* Blood Red from Coca-Cola palette */
   transform: scale(1.1);
 }
 
@@ -401,7 +443,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1BCACA;
+  background-color: var(--popup-bg);
   box-shadow: 5px 5px 55px #1BCACA;
   color: white;
   padding: 20px;
@@ -417,7 +459,7 @@ a {
 }
 
 .cart-count {
-  background-color: #1BCACA;
+  background-color: var(--popup-bg);
   color: white;
   border-radius: 50%;
   padding: 2px 6px;
@@ -428,8 +470,8 @@ a {
 }
 
 .projects.added-to-cart {
-  background-color: #888; /* Grey out the project */
-  color: #ccc;
+  background-color: var(--grey); /* Grey out the project */
+  color: var(--light-grey);
   pointer-events: none; /* Disable interactions */
 }
 
@@ -447,7 +489,7 @@ a {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--modal-bg);
   box-shadow: 5px 5px 55px #1BCACA;
   margin: 15% auto;
   padding: 60px;
@@ -523,10 +565,40 @@ ul#cart-items-list li::before {
   content: '-';
   position: absolute;
   left: 0;
-  color: #333; /* Dash color */
+  color: var(--dash-color); /* Dash color */
 }
 
 .separator {
   border-bottom: 1px solid #ccc; /* Separation line style */
   margin-bottom: 20px; /* Space below the line */
+}
+
+.icon-button {
+  position: fixed;
+  margin-right: 5px;
+  top: 20px;
+  right: 80px; /* Adjust this value to position it to the left of the cart button */
+  z-index: 1000;
+  background-color: var(--engineering-orange);
+  box-shadow: 5px 5px 15px #1BCACA;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: var(--blood-red);
+  transform: scale(1.1);
+}
+
+.icon-button svg {
+  width: 24px;
+  height: 24px;
 }

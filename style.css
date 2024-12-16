@@ -380,6 +380,10 @@ a {
   text-align: center;
 }
 
+.projects h4 {
+    min-height: 100px
+}
+
 .projects p {
   color: #FFF;
   text-align: center;
